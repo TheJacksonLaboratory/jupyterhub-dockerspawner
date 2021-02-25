@@ -1,0 +1,15 @@
+[Unit]
+Description=Jupyterhub
+After=syslog.target network-online.target
+
+[Service]
+Type=simple
+User=jupyter
+ExecStart=/etc/jupyterhub/runJupyter.sh
+WorkingDirectory=/etc/jupyterhub
+Restart=on-failure
+RestartSec=1min
+TimeoutSec=5min
+
+[Install]
+WantedBy=multi-user.target
