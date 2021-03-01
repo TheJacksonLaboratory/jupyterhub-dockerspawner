@@ -94,3 +94,5 @@ vim /var/log/syslog
 ```
 sudo chmod a+x /etc/jupyterhub/runJupyter.sh 
 ```
+
+## see makefile for instructions to create a managed group and host jupythub behind load balancer
